@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:47:32 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/08 19:40:51 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/09 17:59:04 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,16 @@ FileStream::~FileStream(void)
 
 void	FileStream::replaceInStream(char *str1, char *str2)
 {
+	std::string				stream;
+	std::string::size_type	i;
+
+	i = currentLine.find(str1);
+	while (i != std::string::npos)
+	{
+		currentLine.erase(i, std::string(str1).length());
+		currentLine.insert(i, std::string(str2), 0, std::string(str2).length());
+		i = currentLine.find(str1);
+	}
 }
 
 int		FileStream::checkFile(void)
