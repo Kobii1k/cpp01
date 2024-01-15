@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:09:35 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/08 18:25:02 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/15 13:37:18 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@
 		public:
 			void			attack(void);
 							HumanA(std::string new_name, Weapon &new_weapon);
+							~HumanA(void);
 	};
 #endif

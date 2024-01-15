@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:28:07 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/08 18:25:38 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/15 13:38:04 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@
 			void			attack(void);
 			void			setWeapon(Weapon &new_weapon);
 							HumanB(std::string new_name);
+							~HumanB(void);
 	};
 #endif

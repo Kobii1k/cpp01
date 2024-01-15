@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:08:47 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/08 18:30:19 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/15 13:36:58 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,10 @@ HumanA::HumanA(std::string new_name, Weapon &new_weapon)
 {
 	name = new_name;
 	weapon = &new_weapon;
+	std::cout << name << ": HumanA Constructor called" << std::endl;
 }
 
+HumanA::~HumanA(void)
+{
+	std::cout << name << ": HumanA Destructor called" << std::endl;
+}
