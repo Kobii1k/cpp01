@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 14:27:59 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/15 12:16:38 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/15 12:37:06 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ Zombie::Zombie(std::string new_name)
 	name = new_name;
 }
 
-Zombie::Zombie()
+Zombie::Zombie(void)
 {
-	name = "(null)";
+	name = "foo";
 }
 
 Zombie::~Zombie(void)
