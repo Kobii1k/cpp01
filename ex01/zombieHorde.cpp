@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 18:50:20 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/07 19:10:53 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/15 12:16:09 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Zombie	*zombieHorde(int N, std::string name)
 
 	for (int i = 0; i < N; i++)
 	{
-		horde[i].set_name(name);
+		horde[i].setName(name);
 	}
 	return (horde);
 }
