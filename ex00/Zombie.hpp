@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 14:24:02 by mgagne            #+#    #+#             */
-/*   Updated: 2023/12/28 15:19:26 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/15 12:21:00 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@
 			std::string	name;
 		public:
 			void			announce(void);
-			void			set_name(std::string new_name);
-			std::string		get_name(void);
+			void			setName(std::string new_name);
+			std::string		getName(void);
 							Zombie(std::string new_name);
+							Zombie(void);
 							~Zombie(void);
 	};
 #endif
