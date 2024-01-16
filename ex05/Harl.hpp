@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FileStream.hpp                                     :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 18:42:25 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/16 13:57:16 by mgagne           ###   ########.fr       */
+/*   Created: 2024/01/16 11:06:50 by mgagne            #+#    #+#             */
+/*   Updated: 2024/01/16 12:29:11 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILESTREAM_HPP
-	#define FILESTREAM_HPP
+#ifndef HARL_HPP
+	#define HARL_HPP
 
 	#include <iostream>
 	#include <string>
 	#include <fstream>
 
-	class FileStream
+	class Harl
 	{
 		private:
-			std::ifstream	input;
-			std::ofstream	output;
-			std::string		currentLine;
-			int				stop;
+			void debug( void );
+			void info( void );
+			void warning( void );
+			void error( void );
 		public:
-			int				checkFile(void);
-			int				checkEOF(void);
-			void			inputStream(void);
-			void			outputStream(void);
-			void			replaceInStream(char *str1, char *str2);
-			void			openOut(char *str);
-							FileStream(char *str);
-							~FileStream(void);
+			void complain(std::string level);
 	};
 #endif

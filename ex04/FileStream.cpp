@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:47:32 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/09 17:59:04 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/16 14:28:34 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,21 @@
 
 FileStream::FileStream(char *str)
 {
-	std::string		tmp;
-
-
 	input.open(str, std::ifstream::in);
-	tmp = std::string(str) + ".replace";
-	if (input)
-		output.open(tmp.c_str(), std::ofstream::out);
 }
 
 FileStream::~FileStream(void)
 {
 	input.close();
 	output.close();
+}
+
+void	FileStream::openOut(char *str)
+{
+	std::string	tmp;
+
+	tmp = std::string(str) + ".replace";
+	output.open(tmp.c_str(), std::ofstream::out);
 }
 
 void	FileStream::replaceInStream(char *str1, char *str2)
@@ -45,8 +47,10 @@ void	FileStream::replaceInStream(char *str1, char *str2)
 
 int		FileStream::checkFile(void)
 {
-	if (!input || !output)
+	if (!input)
 		return (1);
+	if (!output)
+		return (2);
 	return (0);
 }
 
@@ -57,11 +61,11 @@ int		FileStream::checkEOF(void)
 
 void	FileStream::inputStream(void)
 {
-	if (!getline(input, currentLine))
+	if (!getline(input, currentLine, '\0'))
 		stop = 1;
 }
 
 void	FileStream::outputStream(void)
 {
-	output << currentLine << std::endl;
+	output << currentLine;
 }

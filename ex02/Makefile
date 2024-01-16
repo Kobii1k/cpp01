@@ -7,7 +7,7 @@ BLUE		=	\033[1;34m
 CYAN		=	\033[1;36m
 DEFAULT		=	\033[0m
 SUPPR		=	\r\033[2K
-NAME		=	HI_THIS_IS_BRAIN
+NAME		=	HiThisIsBrain
 
 # --------------- FILES --------------- #
 
@@ -28,7 +28,7 @@ SRC				=	$(addprefix $(DIR_SRC),$(LIST_SRC))
 # ------------ COMPILATION ------------ #
 
 CPPFLAGS		=	-Wall -Wextra -Werror -std=c++98 -g
-
+CXX				=	c++
 DEP_FLAGS		=	-MMD -MP
 
 # -------------  COMMANDS ------------- #
