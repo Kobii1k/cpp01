@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:42:25 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/16 13:57:16 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/16 17:41:27 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 	#include <iostream>
 	#include <string>
 	#include <fstream>
+	#include <cstring>
 
 	class FileStream
 	{

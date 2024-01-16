@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:35:14 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/16 13:59:05 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/16 17:43:18 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 		return (std::cout << "./SedIsForLosers [file] [s1] [s2]" << std::endl, 1);
+	if (strlen(argv[2]) == 0)
+		return (std::cout << "[s1] argument can't be empty" << std::endl, 1);
 	FileStream stream(argv[1]);
 	err = stream.checkFile();
 	if (err == 1)
