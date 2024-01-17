@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:47:32 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/16 17:39:59 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/17 17:22:55 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 FileStream::FileStream(char *str)
 {
 	input.open(str, std::ifstream::in);
+	stop = 0;
 }
 
 FileStream::~FileStream(void)
