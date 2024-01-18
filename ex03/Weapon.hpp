@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:04:59 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/15 12:58:28 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/18 10:06:04 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@
 			~Weapon(void);
 			Weapon(std::string new_type);
 			void					setType(std::string new_type);
-			const std::string		getType(void);
+			const std::string		getType(void) const;
 	};
 #endif
